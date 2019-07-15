@@ -12,7 +12,9 @@ MediaRecorder 录制视频,支持缩放,分段录制
 
 
 ## 快速引入
-#### gradle
+> gradle
+
+  
   项目 build
   
     allprojects {
@@ -28,7 +30,7 @@ MediaRecorder 录制视频,支持缩放,分段录制
 	        implementation 'com.github.HerbLee:k_mediaRecorder:1.0'
 	}
 
-#### maven
+> maven
 	
 	<repositories>
 		<repository>
@@ -60,7 +62,7 @@ MediaRecorder 录制视频,支持缩放,分段录制
 	
 	 recorderHelper = RecorderHelper(this, rv_test, object :OnRecorderHelperChangeListener{
             override fun startRecorder(file: String) {
-	    //开始录制 files 为返回的录制视频的地址+名称
+	    	//开始录制 files 为返回的录制视频的地址+名称
 	    
             }
 
@@ -84,25 +86,25 @@ MediaRecorder 录制视频,支持缩放,分段录制
 	
 	// 2 初始化各种参数(都为可选)
 	
-	recorderHelper.setFilePath(path:String) //设置视频保存的地址 默认为 根目录/herb2sy/temp
-	recorderHelper.setMaxDuration(duration:Int) //设置最大录制时长单位为min 默认为 10min 
-	recorderHelper.setMaxQualityInt(quality:Int) //设置录制视频大小 默认为 720p, 目前仅支持 720 或 1080
-	recorderHelper.setVideoEncodingBitRate(size:Int) // 设置比特率 默认为5 特别清楚, 可以设置 1-5之间的值数值越大越清晰
-	recorderHelper.reset() // 重置所有界面信息
-	recorderHelper.setNotifySys(flag:Boolean) // 是否要通知系统数据库刷新视频信息, 默认为false 
+		recorderHelper.setFilePath(path:String) //设置视频保存的地址 默认为 根目录/herb2sy/temp
+		recorderHelper.setMaxDuration(duration:Int) //设置最大录制时长单位为min 默认为 10min 
+		recorderHelper.setMaxQualityInt(quality:Int) //设置录制视频大小 默认为 720p, 目前仅支持 720 或 1080
+		recorderHelper.setVideoEncodingBitRate(size:Int) // 设置比特率 默认为5 特别清楚, 可以设置 1-5之间的值数值越大越清晰
+		recorderHelper.reset() // 重置所有界面信息
+		recorderHelper.setNotifySys(flag:Boolean) // 是否要通知系统数据库刷新视频信息, 默认为false 
 	
 	
 	// 3 请在activity设置
 		
-	 override fun onDestroy() {
-		recorderHelper.onDestory()
-		super.onDestroy()
-	    }
+		 override fun onDestroy() {
+			recorderHelper.onDestory()
+			super.onDestroy()
+		    }
 
-	    override fun onStop() {
-		recorderHelper.onStop()
-		super.onStop()
-	    }
+		    override fun onStop() {
+			recorderHelper.onStop()
+			super.onStop()
+		    }
 	
 	// 4 启动 recorderHelper(必须要有的,不然没办法使用)
 		recorderHelper.start()
@@ -110,4 +112,4 @@ MediaRecorder 录制视频,支持缩放,分段录制
 
 
 
-*** 有问题请邮箱联系 herb2sy@gmail.com
+> 有问题请邮箱联系 herb2sy@gmail.com
