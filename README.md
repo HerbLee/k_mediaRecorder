@@ -6,6 +6,7 @@ MediaRecorder 录制视频,支持缩放,分段录制
 
 ## 效果
 
+![text](https://github.com/HerbLee/k_mediaRecorder/blob/master/c5fa474a314ffe2bf5fd219be8b255b.jpg)
 ![text](https://github.com/HerbLee/k_mediaRecorder/blob/master/a1e0a7b685374dd0aac0ddbce57c453.jpg)
 
 
