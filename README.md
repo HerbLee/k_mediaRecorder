@@ -15,8 +15,8 @@ MediaRecorder 录制视频,支持缩放,分段录制
 > gradle
 
   
-  项目 build
   
+	项目 build
     allprojects {
       repositories {
         ...
