@@ -34,3 +34,40 @@ MediaRecorder 录制视频,支持缩放,分段录制
 	    <artifactId>k_mediaRecorder</artifactId>
 	    <version>1.0</version>
 	</dependency>
+	
+	
+## 快捷使用
+
+> layout
+	
+	 <com.herb2sy.media.lib.recorder.view.RecorderView
+	      android:id="@+id/rv_test"
+	      android:layout_width="match_parent"
+	      android:layout_height="match_parent"/>
+	      
+> activity
+
+	 recorderHelper = RecorderHelper(this, rv_test,object :OnRecorderHelperChangeListener{
+            override fun startRecorder(file: String) {
+
+            }
+
+            override fun endRecorder(file: String) {
+
+            }
+
+            override fun saveVideo(file: String) {
+
+            }
+
+            override fun onBack() {
+
+            }
+
+            override fun message(msg: String) {
+
+            }
+
+        })
+	
+
