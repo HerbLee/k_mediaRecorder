@@ -4,6 +4,12 @@ MediaRecorder 录制视频,支持缩放,分段录制
 
 [![](https://www.jitpack.io/v/HerbLee/k_mediaRecorder.svg)](https://www.jitpack.io/#HerbLee/k_mediaRecorder)
 
+## 效果
+
+![text](https://github.com/HerbLee/k_mediaRecorder/blob/master/a1e0a7b685374dd0aac0ddbce57c453.jpg)
+
+
+
 ## 快速引入
 #### gradle
   项目 build
