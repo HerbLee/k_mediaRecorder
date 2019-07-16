@@ -28,7 +28,7 @@ MediaRecorder 录制视频,支持缩放,分段录制
     app build
    
     dependencies {
-	        implementation 'com.github.HerbLee:k_mediaRecorder:1.0'
+	        implementation 'com.github.HerbLee:k_mediaRecorder:1.3'
 	}
 
 > maven
