@@ -116,6 +116,7 @@ MediaRecorder 录制视频,支持缩放,分段录制
 	    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
 	    <uses-permission android:name="android.permission.CAMERA"/>
 	    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+	     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
 
 
 > 有问题请邮箱联系 herb2sy@gmail.com
