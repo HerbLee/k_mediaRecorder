@@ -60,6 +60,8 @@ class RecorderHelper(val context:Context,val recorderView:RecorderView, val list
     private var videoEncodingBitRate:Int = 5
 
     private var notifiySys:Boolean = false
+    
+    private var defMode = 0
 
 
     private fun listener() {
@@ -67,6 +69,12 @@ class RecorderHelper(val context:Context,val recorderView:RecorderView, val list
             override fun onPlay() {
                 recordState = true
                 startRecord()
+                 if(!recordVoice){
+                     val am = activity?.getSystemService(Context.AUDIO_SERVICE) as AudioManager
+                    defMode = am.mode
+                    am.mode = AudioManager.STREAM_MUSIC
+                    am.isMicrophoneMute = true
+                }
             }
 
             override fun onStop() {
@@ -112,6 +120,11 @@ class RecorderHelper(val context:Context,val recorderView:RecorderView, val list
 
 
     private fun endRecord() {
+         if(!recordVoice){
+             val am = activity?.getSystemService(Context.AUDIO_SERVICE) as AudioManager
+            am.mode =defMode
+            am.isMicrophoneMute = false
+        }
         try {
             mCamera?.lock()
             mediaRecorder?.stop()
@@ -150,6 +163,7 @@ class RecorderHelper(val context:Context,val recorderView:RecorderView, val list
 
     private fun tmepEndRecord(){
 
+        
         mCamera?.lock()
         mediaRecorder?.stop()
         mediaRecorder?.release()
@@ -168,6 +182,7 @@ class RecorderHelper(val context:Context,val recorderView:RecorderView, val list
      * start recorder
      */
     private fun startRecord() {
+        
         try {
             initMediarecorder()
             mediaRecorder?.prepare()
@@ -193,7 +208,7 @@ class RecorderHelper(val context:Context,val recorderView:RecorderView, val list
         if (!file.exists() && !file.isDirectory){
             file.mkdirs()
         }
-
+        
         mediaRecorder = MediaRecorder()
 
         mCamera?.unlock()
@@ -237,6 +252,7 @@ class RecorderHelper(val context:Context,val recorderView:RecorderView, val list
     fun setVideoEncodingBitRate(size:Int){
         videoEncodingBitRate = size
     }
+    
 
     /**
      * reset all
@@ -253,6 +269,11 @@ class RecorderHelper(val context:Context,val recorderView:RecorderView, val list
     fun onDestory(){
         mTimer?.destroy()
         myTimerDuration?.destroy()
+         if(!recordVoice){
+             val am = activity?.getSystemService(Context.AUDIO_SERVICE) as AudioManager
+            am.mode =defMode
+            am.isMicrophoneMute = false
+        }
 
 //        if (!recordVoice){
 //            val systemService = context.getSystemService(Context.AUDIO_SERVICE) as AudioManager
@@ -285,11 +306,12 @@ class RecorderHelper(val context:Context,val recorderView:RecorderView, val list
     fun start(){
         initSurface()
         listener()
+       
     }
 
 
 
-    private fun setRecordVoice(flat:Boolean){
+    fun setRecordVoice(flat:Boolean){
         recordVoice = flat
 
 
