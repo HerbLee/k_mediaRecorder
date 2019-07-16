@@ -93,6 +93,7 @@ MediaRecorder 录制视频,支持缩放,分段录制
 		recorderHelper.setVideoEncodingBitRate(size:Int) // 设置比特率 默认为5 特别清楚, 可以设置 1-5之间的值数值越大越清晰
 		recorderHelper.reset() // 重置所有界面信息
 		recorderHelper.setNotifySys(flag:Boolean) // 是否要通知系统数据库刷新视频信息, 默认为false 
+		recorderHelper.setNotifySys(flag:Boolean) // 是否要通知系统数据库刷新视频信息, 默认为false 
 	
 	
 	// 3 请在activity设置
