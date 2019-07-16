@@ -70,7 +70,7 @@ class RecorderHelper(val context:Context,val recorderView:RecorderView, val list
                 recordState = true
                 startRecord()
                  if(!recordVoice){
-                     val am = activity?.getSystemService(Context.AUDIO_SERVICE) as AudioManager
+                     val am = context.getSystemService(Context.AUDIO_SERVICE) as AudioManager
                     defMode = am.mode
                     am.mode = AudioManager.STREAM_MUSIC
                     am.isMicrophoneMute = true
@@ -121,7 +121,7 @@ class RecorderHelper(val context:Context,val recorderView:RecorderView, val list
 
     private fun endRecord() {
          if(!recordVoice){
-             val am = activity?.getSystemService(Context.AUDIO_SERVICE) as AudioManager
+             val am = context.getSystemService(Context.AUDIO_SERVICE) as AudioManager
             am.mode =defMode
             am.isMicrophoneMute = false
         }
@@ -270,7 +270,7 @@ class RecorderHelper(val context:Context,val recorderView:RecorderView, val list
         mTimer?.destroy()
         myTimerDuration?.destroy()
          if(!recordVoice){
-             val am = activity?.getSystemService(Context.AUDIO_SERVICE) as AudioManager
+             val am = context.getSystemService(Context.AUDIO_SERVICE) as AudioManager
             am.mode =defMode
             am.isMicrophoneMute = false
         }
