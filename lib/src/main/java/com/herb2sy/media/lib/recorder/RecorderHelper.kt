@@ -221,7 +221,7 @@ class RecorderHelper(val context:Context,val recorderView:RecorderView, val list
         mediaRecorder?.setOutputFormat(MediaRecorder.OutputFormat.MPEG_4)
         mediaRecorder?.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB)
 
-
+        mediaRecorder?.setVideoFrameRate(25)
         mediaRecorder?.setVideoEncoder(MediaRecorder.VideoEncoder.H264)
         mediaRecorder?.setVideoEncodingBitRate(videoEncodingBitRate* width*height)
 
@@ -352,7 +352,7 @@ class RecorderHelper(val context:Context,val recorderView:RecorderView, val list
                 parameters?.focusMode = "continuous-video"
             }
             parameters?.focusMode = Camera.Parameters.FOCUS_MODE_CONTINUOUS_VIDEO
-
+            parameters?.setPreviewFpsRange(25,25)
             mCamera?.parameters = parameters
             mCamera?.startPreview()
 
