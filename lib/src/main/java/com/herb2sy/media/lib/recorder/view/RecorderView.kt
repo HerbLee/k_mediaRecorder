@@ -87,22 +87,22 @@ class RecorderView : RelativeLayout {
         }
 
         lly_menu.setOnClickListener {
-                if(lly_menu.visibility == View.VISIBLE){
-                    lly_menu.visibility = View.INVISIBLE
-                }else{
-                    lly_menu.visibility = View.VISIBLE
-                }
+//                 if(lly_menu.visibility == View.VISIBLE){
+//                     lly_menu.visibility = View.INVISIBLE
+//                 }else{
+//                     lly_menu.visibility = View.VISIBLE
+//                 }
 
 
 
         }
         lly_surface.setOnClickListener {
 
-                if(lly_menu.visibility == View.VISIBLE){
-                    lly_menu.visibility = View.INVISIBLE
-                }else{
-                    lly_menu.visibility = View.VISIBLE
-                }
+//                 if(lly_menu.visibility == View.VISIBLE){
+//                     lly_menu.visibility = View.INVISIBLE
+//                 }else{
+//                     lly_menu.visibility = View.VISIBLE
+//                 }
 
         }
 
