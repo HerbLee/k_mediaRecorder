@@ -224,7 +224,7 @@ class RecorderHelper(val context:Context,val recorderView:RecorderView, val list
 
         mediaRecorder?.setVideoEncoder(MediaRecorder.VideoEncoder.H264)
         mediaRecorder?.setVideoEncodingBitRate(videoEncodingBitRate* width*height)
-
+        mediaRecorder?.setVideoFrameRate(25)
         mediaRecorder?.setVideoSize(width,height)
         mediaRecorder?.setPreviewDisplay(recorderView.getSufaceView().holder.surface)
 
