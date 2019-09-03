@@ -352,7 +352,7 @@ class RecorderHelper(val context:Context,val recorderView:RecorderView, val list
                 parameters?.focusMode = "continuous-video"
             }
             parameters?.focusMode = Camera.Parameters.FOCUS_MODE_CONTINUOUS_VIDEO
-            parameters?.setPreviewFpsRange(24,24)
+            parameters?.setPreviewFpsRange(25000,25000)
             mCamera?.parameters = parameters
             mCamera?.startPreview()
 
