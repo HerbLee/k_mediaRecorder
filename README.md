@@ -1,5 +1,5 @@
 # k_mediaRecorder
-MediaRecorder 录制视频,支持缩放,分段录制
+MediaRecorder 录制视频,支持缩放,分段录制2.0
 > 此版本为初始版本,后续持续更新
 
 [![](https://www.jitpack.io/v/HerbLee/k_mediaRecorder.svg)](https://www.jitpack.io/#HerbLee/k_mediaRecorder)
