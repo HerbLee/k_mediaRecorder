@@ -219,7 +219,7 @@ class RecorderHelper(val context:Context,val recorderView:RecorderView, val list
 
         mediaRecorder?.setVideoSource(MediaRecorder.VideoSource.CAMERA)
         mediaRecorder?.setOutputFormat(MediaRecorder.OutputFormat.MPEG_4)
-        mediaRecorder?.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB)
+        mediaRecorder?.setAudioEncoder(MediaRecorder.AudioEncoder.AAC)
 
         mediaRecorder?.setVideoEncoder(MediaRecorder.VideoEncoder.H264)
         mediaRecorder?.setVideoEncodingBitRate(videoEncodingBitRate* width*height)
